@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <h1>{{ content.title }}</h1>
+
+    {% for page in content.element.pages %}
+        <img src="{{ page.image.url }}" alt="{{ page.image.title }}" height="50">
+        <h2>
+            <a href="{{ sulu_content_path(page.url) }}">{{ page.title }}</a>
+        </h2>
+    {% endfor %}
+{% endblock %}

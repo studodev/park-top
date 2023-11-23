@@ -1,0 +1,43 @@
+:root {
+    --color-primary: #A5D3D8;
+    --color-secondary: #101d40;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 16px;
+    color: var(--color-secondary);
+}
+
+header {
+    background-color: var(--color-primary);
+    padding: 10px;
+}
+
+header ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+main {
+    padding: 10px;
+    flex: 1;
+}
+
+footer {
+    background-color: var(--color-primary);
+    text-align: center;
+}

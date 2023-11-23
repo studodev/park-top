@@ -1,0 +1,25 @@
+main {
+    padding: 0;
+}
+
+article .article-header {
+    position: relative;
+    width: 100vw;
+    height: 400px;
+    overflow: hidden;
+}
+
+article .article-header img {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+}
+
+article .article-header h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}

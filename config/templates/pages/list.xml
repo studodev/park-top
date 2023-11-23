@@ -1,0 +1,94 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>list</key>
+
+    <view>pages/list</view>
+    <controller>Sulu\Bundle\WebsiteBundle\Controller\DefaultController::indexAction</controller>
+    <cacheLifetime>86400</cacheLifetime>
+
+    <meta>
+        <title lang="en">Liste</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+            </meta>
+
+            <params>
+                <param name="headline" value="true"/>
+            </params>
+
+            <tag name="sulu.rlp.part"/>
+        </property>
+
+        <property name="url" type="resource_locator" mandatory="true">
+            <meta>
+                <title lang="en">Resourcelocator</title>
+            </meta>
+
+            <tag name="sulu.rlp"/>
+        </property>
+
+        <section name="content">
+            <meta>
+                <title lang="en">Content</title>
+            </meta>
+
+            <properties>
+                <block name="element" default-type="pages" minOccurs="1" maxOccurs="1">
+                    <meta>
+                        <title lang="en">Elements</title>
+                    </meta>
+
+                    <types>
+                        <type name="pages">
+                            <meta>
+                                <title lang="en">Pages</title>
+                            </meta>
+
+                            <properties>
+                                <property name="pages" type="smart_content">
+                                    <meta>
+                                        <title lang="en">Pages</title>
+                                    </meta>
+
+                                    <params>
+                                        <param name="properties" type="collection">
+                                            <param name="image" value="image"/>
+                                            <param name="headerImage" value="headerImage"/>
+                                            <param name="excerptTitle" value="excerpt.title"/>
+                                            <param name="excerptImages" value="excerpt.images"/>
+                                        </param>
+                                    </params>
+                                </property>
+                            </properties>
+                        </type>
+
+                        <type name="articles">
+                            <meta>
+                                <title lang="en">Articles</title>
+                            </meta>
+
+                            <properties>
+                                <property name="articles" type="smart_content">
+                                    <meta>
+                                        <title lang="en">Articles</title>
+                                    </meta>
+
+                                    <params>
+                                        <param name="provider" value="articles"/>
+                                    </params>
+                                </property>
+                            </properties>
+                        </type>
+                    </types>
+                </block>
+            </properties>
+        </section>
+    </properties>
+</template>

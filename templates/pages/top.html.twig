@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block style %}
+    <link rel="stylesheet" href="{{ asset('assets/css/top.css') }}">
+{% endblock %}
+
+{% block content %}
+    <article>
+        <div class="article-header">
+            <img src="{{ content.image.url }}" alt="{{ content.image.title }}">
+            <h1>{{ content.title }}</h1>
+        </div>
+
+        <p>
+            {{ content.article|raw }}
+        </p>
+    </article>
+
+{% endblock %}
